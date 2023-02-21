@@ -1,0 +1,220 @@
+@font-face {
+  font-family: "HankenGrotesk";
+  src: url("assets/fonts/HankenGrotesk-VariableFont_wght.ttf");
+}
+
+:root {
+  --ff-primary: "HankenGrotesk";
+  --fw-500: 500;
+  --fw-700: 700;
+  --fw-800: 800;
+
+  --clr-light-red: hsl(0, 100%, 67%);
+  --clr-light-red-light: hsl(0, 100%, 67%, 0.1);
+  --clr-orangey-yellow: hsl(39, 100%, 56%);
+  --clr-orangey-yellow-light: hsl(39, 100%, 56%, 0.1);
+  --clr-green-teal: hsl(166, 100%, 37%);
+  --clr-green-teal-light: hsl(166, 100%, 37%, 0.1);
+  --clr-cobalt-blue: hsl(234, 85%, 45%);
+  --clr-cobalt-blue-light: hsl(234, 85%, 45%, 0.1);
+  --clr-slate-blue: hsl(252, 100%, 67%);
+  --clr-royal-blue: hsl(241, 81%, 54%);
+  --clr-violet-blue: hsla(256, 72%, 46%, 1);
+  --clr-persian-blue: hsla(241, 72%, 46%, 0);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-pale-blue: hsl(221, 100%, 96%);
+  --clr-light-lavender: hsl(241, 100%, 89%);
+  --clr-dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-primary), sans-serif;
+  background: var(--clr-white);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  width: 36rem;
+  border-radius: 1.8rem;
+  overflow: hidden;
+  box-shadow: 0px 10px 20px var(--clr-light-lavender);
+}
+
+.result-panel {
+  background: linear-gradient(
+    210deg,
+    var(--clr-slate-blue),
+    var(--clr-royal-blue)
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1.8rem;
+  border-radius: 1.8rem;
+  color: var(--clr-white);
+  width: 50%;
+}
+
+.title {
+  color: var(--clr-light-lavender);
+  font-weight: var(--fw-500);
+  font-size: 1.2rem;
+}
+
+.score-area {
+  background: linear-gradient(
+    180deg,
+    var(--clr-violet-blue),
+    var(--clr-royal-blue)
+  );
+  border-radius: 50%;
+  width: 10rem;
+  padding: 2rem;
+  margin: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.score-area span {
+  color: var(--clr-light-lavender);
+  font-size: 0.8rem;
+}
+
+.score {
+  font-weight: 800;
+  font-size: 4rem;
+}
+
+.grade {
+  font-weight: 700;
+  font-size: 1.6rem;
+  padding-bottom: 1rem;
+}
+
+.desc {
+  font-size: 0.8em;
+  width: 11rem;
+  text-align: center;
+  color: var(--clr-light-lavender);
+}
+
+.summary-panel {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 50%;
+}
+
+.title-dark {
+  color: var(--clr-dark-gray-blue);
+  font-weight: var(--fw-700);
+  margin-bottom: 0.5rem;
+}
+
+.category {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem;
+  padding-inline: 1rem;
+  border-radius: 0.5rem;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+
+.category-red {
+  background: var(--clr-light-red-light);
+  color: var(--clr-light-red);
+}
+
+.category-yellow {
+  background: var(--clr-orangey-yellow-light);
+  color: var(--clr-orangey-yellow);
+}
+
+.category-green {
+  background: var(--clr-green-teal-light);
+  color: var(--clr-green-teal);
+}
+
+.category-blue {
+  background: var(--clr-cobalt-blue-light);
+  color: var(--clr-cobalt-blue);
+}
+
+.label {
+  font-weight: var(--fw-500);
+}
+
+.percentage {
+  text-align: right;
+  flex-grow: 1;
+  color: var(--clr-light-lavender);
+}
+
+.percentage span {
+  color: var(--clr-dark-gray-blue);
+  font-weight: var(--fw-700);
+}
+
+img {
+  width: 1rem;
+  max-width: 100%;
+}
+
+.cta {
+  margin-top: 2rem;
+  background: var(--clr-dark-gray-blue);
+  color: var(--clr-white);
+  border: none;
+  padding: 0.8rem;
+  border-radius: 2rem;
+}
+
+@media (max-width: 625px) {
+  .container {
+    width: 100%;
+    flex-direction: column;
+    overflow: auto;
+    border-radius: 0;
+  }
+
+  .result-panel {
+    border-radius: 0 0 1.8rem 1.8rem;
+    width: 100%;
+  }
+
+  .desc {
+    width: 100%;
+    padding-inline: 2rem;
+  }
+
+  .summary-panel {
+    width: 100%;
+  }
+
+  .category {
+    padding: 1rem;
+  }
+
+  .cta {
+    padding: 1rem;
+    margin-top: 0.75rem;
+  }
+}
