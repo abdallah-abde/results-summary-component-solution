@@ -72,6 +72,10 @@ body {
   font-size: 1.2rem;
 }
 
+.result-panel .title {
+  text-align: center;
+}
+
 .score-area {
   background: linear-gradient(
     180deg,
@@ -106,9 +110,9 @@ body {
 }
 
 .desc {
-  font-size: 0.8em;
+  font-size: 0.8rem;
   width: 11rem;
-  text-align: center;
+  margin: auto;
   color: var(--clr-light-lavender);
 }
 
